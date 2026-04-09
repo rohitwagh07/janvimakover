@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Lato', sans-serif; color: #1f2937; background: #fff; }
+h1,h2,h3,h4 { font-family: 'Playfair Display', serif; }
+
+@layer components {
+  .btn-primary {
+    @apply bg-rose-600 text-white px-6 py-3 rounded-full font-semibold hover:bg-rose-700 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 inline-flex items-center gap-2;
+  }
+  .btn-outline {
+    @apply border-2 border-rose-600 text-rose-600 px-6 py-3 rounded-full font-semibold hover:bg-rose-600 hover:text-white transition-all duration-300 inline-flex items-center gap-2;
+  }
+  .btn-secondary {
+    @apply bg-pink-100 text-rose-700 px-6 py-3 rounded-full font-semibold hover:bg-pink-200 transition-all duration-300 inline-flex items-center gap-2;
+  }
+  .card {
+    @apply bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden;
+  }
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-gray-800 mb-4;
+  }
+  .section-subtitle {
+    @apply text-gray-500 text-lg mb-10 max-w-2xl mx-auto;
+  }
+  .input-field {
+    @apply w-full px-4 py-3 border border-pink-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-rose-400 focus:border-transparent transition-all bg-white text-gray-800 placeholder-gray-400;
+  }
+  .page-hero {
+    @apply bg-gradient-to-br from-pink-50 via-rose-50 to-pink-100 py-14 text-center;
+  }
+  .admin-card {
+    @apply bg-white rounded-2xl shadow-sm border border-gray-100 p-6;
+  }
+}
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #fce7f3; }
+::-webkit-scrollbar-thumb { background: #fda4af; border-radius: 3px; }
+
+.shimmer {
+  background: linear-gradient(90deg, #fce7f3 25%, #fbcfe8 50%, #fce7f3 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+@keyframes shimmer { 0% { background-position: -200% 0; } 100% { background-position: 200% 0; } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+@keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.animate-fade-in { animation: fadeIn 0.5s ease-in-out; }
+.animate-slide-up { animation: slideUp 0.5s ease-out; }
+.animate-float { animation: float 3s ease-in-out infinite; }
