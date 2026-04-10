@@ -126,37 +126,7 @@ export default function LoginPage() {
           </p>
 
           {/* Demo Credentials - clickable */}
-          <div className="mt-5 p-4 bg-pink-50 rounded-2xl border border-pink-100">
-            <p className="text-xs text-gray-500 text-center font-semibold mb-3">
-              🔑 Demo Credentials (Click to fill)
-            </p>
-            <div className="space-y-2">
-              <button
-                type="button"
-                onClick={fillAdmin}
-                className="w-full text-left text-xs bg-white border border-rose-200 rounded-xl px-3 py-2.5 hover:bg-rose-50 transition-colors"
-              >
-                <span className="font-bold text-rose-600">👑 Admin:</span>
-                <span className="text-gray-600 ml-2">
-                  admin@janvimakeover.com
-                </span>
-                <span className="text-gray-400 ml-2">/ Admin@1234</span>
-              </button>
-              <button
-                type="button"
-                onClick={fillUser}
-                className="w-full text-left text-xs bg-white border border-pink-200 rounded-xl px-3 py-2.5 hover:bg-pink-50 transition-colors"
-              >
-                <span className="font-bold text-pink-600">👤 User:</span>
-                <span className="text-gray-600 ml-2">priya@example.com</span>
-                <span className="text-gray-400 ml-2">/ User@1234</span>
-              </button>
-            </div>
-            <p className="text-xs text-gray-400 text-center mt-2">
-              Run <code className="bg-gray-100 px-1 rounded">npm run seed</code>{" "}
-              first if not working
-            </p>
-          </div>
+          
 
           <p className="text-center mt-5">
             <Link
